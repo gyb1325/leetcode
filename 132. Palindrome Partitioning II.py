@@ -1,6 +1,7 @@
 class Solution:
 
     def minCut(self, s: str) -> int:
+        # BackTracking Method will exceed the time limit
         #             res = [float("inf")]
         #             self.dfs(s, [], res)
         #             return res[0]
@@ -18,7 +19,7 @@ class Solution:
 
         #     def isP(self, s):
         #         return s == s[::-1]
-
+        # DP method track s[i..j] is palindrome, and s[i..n-1] min cut
         m = len(s)
         d = [0] * m
         pal = [[False] * m for _ in range(m)]
